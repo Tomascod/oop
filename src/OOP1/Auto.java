@@ -29,7 +29,7 @@ public class Auto {
 
         public void zrychli(int oKolik){
             if (!nastartovane){
-                System.out.println("nejdřív nastartuj");
+                System.out.println("nejdřív nastartujem");
             }else aktRychlost+=20;
         }
 }
