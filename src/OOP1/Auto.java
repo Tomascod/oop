@@ -13,6 +13,7 @@ public class Auto {
             System.out.println("barva: "+this.barva);
             System.out.println("Pojízdné: "+((this.pojizdne)?"ano":"ne"));
             System.out.println("maxSpeed: "+ this.maxSpeed);
+            System.out.println("Aktuální rychlost: "+this.aktRychlost);
         }
 
         public void stav(){
@@ -20,16 +21,38 @@ public class Auto {
                 System.out.println("Stojím a jen tak nepojedu, jsem rozbité");
             } else if (aktRychlost==0) {
                 System.out.println("Stojím, ale jsem připravené k jízdě");
-            }else System.out.println("jedu rychlostí" + aktRychlost + "km/h");
+            }else System.out.println("jedu rychlostí " + aktRychlost + "km/h");
         }
 
-        public void nastartuj(){
-            nastartovane = true;
+        public void nastartuj() {
+            if (pojizdne) nastartovane = true;
         }
-
         public void zrychli(int oKolik){
             if (!nastartovane){
-                System.out.println("nejdřív nastartujem");
-            }else aktRychlost+=20;
+                System.out.println("nejdřív nastartuj");
+            }else aktRychlost+=oKolik;
+
+            if (aktRychlost>maxSpeed){
+                pojizdne = false;
+                nastartovane = false;
+                aktRychlost=0;
+                System.out.println("přehřál si motor");
+            }
+        }
+
+        public void zpomal(int oKolik){
+            aktRychlost-=oKolik;
+            if (aktRychlost<0){
+                aktRychlost=0;
+                System.out.println("Auto je zastaveno");
+            }
+        }
+
+        public void vypnoutMotor(){
+            if (aktRychlost>0){
+                System.out.println("Nejdříve zastav auto");
+            }else {
+                nastartovane=false;
+            }
         }
 }
