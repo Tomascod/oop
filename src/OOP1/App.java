@@ -10,13 +10,8 @@ public class App {
         a1.maxSpeed = 201;
         a1.aktRychlost = 100;
 
-        Auto a2 = new Auto();
+        Auto a2 = new Auto("plechovka","modrá",225,128);
 
-        a2.nazev = "plechovka";
-        a2.barva = "modrá";
-        a2.pojizdne = false;
-        a2.maxSpeed = 90;
-        a2.aktRychlost = 50;
 
         a1.stav();
         a1.zpomal(60);
@@ -24,5 +19,7 @@ public class App {
         a1.zpomal(40);
         a1.stav();
         a1.vypnoutMotor();
+        a1.zatrub();
+
     }
 }
