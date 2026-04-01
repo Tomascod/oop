@@ -7,18 +7,18 @@ public class App {
         a1.barva = "černá";
         a1.pojizdne = true;
         a1.nastartovane = true;
-        a1.maxSpeed = 201;
-        a1.aktRychlost = 100;
-
-        Auto a2 = new Auto("plechovka","modrá",225,128);
+        a1.setMaxSpeed(200);
+        a1.setAktRychlost(110);
 
 
-        a1.stav();
-        a1.zpomal(60);
+        Auto a2 = new Auto("plechovka","modrá");
+        a2.setMaxSpeed(150);
+
         a1.vypisInfo();
-        a1.zpomal(40);
         a1.stav();
+        a1.zpomal(100);
         a1.vypnoutMotor();
+        a1.stav();
         a1.zatrub();
 
     }

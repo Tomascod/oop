@@ -5,8 +5,8 @@ public class Auto {
         String barva;
         boolean pojizdne = true;
         boolean nastartovane;
-        int maxSpeed;
-        int aktRychlost;
+        private int maxSpeed;
+        private int aktRychlost;
 
         public Auto(){}
 
@@ -30,6 +30,17 @@ public class Auto {
             this.aktRychlost = aktRychlost;
     }
 
+
+        void setMaxSpeed(int maxSpeed){
+            this.maxSpeed = (maxSpeed>0)?maxSpeed:0;
+    }
+
+    void setAktRychlost(int aktRychlost){
+            this.aktRychlost = (aktRychlost<0)?0:aktRychlost;
+    }
+    int getMaxSpeed(){
+            return this.maxSpeed;
+    }
         public void vypisInfo(){
             System.out.println("název: "+ this.nazev);
             System.out.println("barva: "+this.barva);
@@ -94,7 +105,7 @@ public class Auto {
         }
 
         public void zatrub(){
-            System.out.println("trub - trub");
+            System.out.println("tůůůů, tůůů");
             System.out.println("______________________________");
         }
 }
