@@ -108,7 +108,7 @@ public class Auto {
             System.out.println("tůůůů, tůůů");
             System.out.println("______________________________");
                 
-//konstruktor nemá návratovou hodnotu, jmenuje se stejně jako třída
+//konstruktor nemá návratovou hodnotu, jmenuje se stejně jako třída, co to je? = metoda, která se volá při vytváření objektu
 //po spuštění se spustí defaultní konstruktor, pokud není napsán ve třídě
 //pokud jsou dva konstruktory tak se musí lišit v počtu nebo datovém typu
 //můžu volat jinej konstruktor z jinýho, za pomocí this
