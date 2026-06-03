@@ -1,11 +1,15 @@
 package priklad1;
 
+import java.util.ArrayList;
+
 public class Lampa {
 
     private boolean rozsvicena;
 
     private static int aktualneRozsviceno;
     private static int maxRozsviceno;
+
+     ArrayList<String> vsechnyLampy = new ArrayList<>();
 
     public Lampa() {
         this.rozsvicena = false;
@@ -52,5 +56,10 @@ public class Lampa {
     static int getMaxRozsviceno() {
         return maxRozsviceno;
     }
+
+    public void zhasniVse(ArrayList seznam){
+        for (int i = 0; i < seznam.size(); i++) {
+        }}
+
 }
 
